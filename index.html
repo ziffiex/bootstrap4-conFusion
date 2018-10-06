@@ -30,7 +30,7 @@
                             Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a href="#" onclick="showModal('#loginModal')"> <!--data-toggle="modal" data-target="#loginModal">-->
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -170,7 +170,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">
+                    <a role="button" class="btn btn-block nav-link btn-warning" href="#" onclick="showModal('#reserveModal')"> <!-- data-toggle="modal" data-target="#reserveModal"> -->
                         Reserve Table
                     </a>
                 </div>
@@ -296,8 +296,13 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
-            });
+            }); 
         });
+
+        function showModal(id) {
+            $(id).modal('show');
+            $(id).modal('focus');
+        }
     </script>
 
 </body>
